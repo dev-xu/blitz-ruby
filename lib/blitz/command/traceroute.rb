@@ -13,7 +13,7 @@ class Traceroute < Command # :nodoc:
         continue = true
         last_index = nil
         begin
-            [ 'INT', 'STOP', 'HUP' ].each do |s| 
+            [ 'INT', 'HUP' ].each do |s|
                 trap(s) { continue = false }
             end
             

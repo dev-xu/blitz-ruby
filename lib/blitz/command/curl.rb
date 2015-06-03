@@ -231,7 +231,7 @@ class Curl < Command # :nodoc:
     def rush job
         continue = true
         last_index = nil
-        signals = Signal.list.keys & [ 'INT', 'STOP', 'HUP' ]
+        signals = Signal.list.keys & [ 'INT', 'HUP' ]
         begin
             signals.each do |s| 
                 trap(s) { continue = false }
